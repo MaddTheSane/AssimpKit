@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The dictionary of CAKeyframeAnimation objects, where each key is a bone name.
  */
-@property (readonly, nonatomic) NSDictionary<NSString*,CAKeyframeAnimation*> *frameAnims;
+@property (readonly, nonatomic) NSDictionary<NSString*,NSDictionary<NSString*,CAKeyframeAnimation*>*> *frameAnims;
 
 #pragma mark - Creating a scene animation
 
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param anims The dictionary of key frame animations.
  @return A new scene animation object.
  */
-- (instancetype)initWithKey:(NSString *)key frameAnims:(NSDictionary<NSString*,CAKeyframeAnimation*> *)anims;
+- (instancetype)initWithKey:(NSString *)key frameAnims:(NSDictionary<NSString*,NSDictionary<NSString*,CAKeyframeAnimation*>*> *)anims;
 
 @end
 
