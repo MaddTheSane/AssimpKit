@@ -126,7 +126,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     // Start the import on the given file with some example postprocessing
     // Usually - if speed is not the most important aspect for you - you'll t
     // probably to request more postprocessing than we do in this example.
-    const char *pFile = [filePath UTF8String];
+    const char *pFile = [filePath fileSystemRepresentation];
     const struct aiScene *aiScene = aiImportFile(pFile, postProcessFlags);
     // aiProcess_FlipUVs | aiProcess_Triangulate
     // If the import failed, report it
@@ -658,14 +658,14 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
         magFilter = [keyPrefix stringByAppendingString:magFilter];
 
         [material setValue:0 forKey:channel];
-        [material setValue:[NSNumber numberWithInt:SCNWrapModeRepeat]
+        [material setValue:@(SCNWrapModeRepeat)
                     forKey:wrapS];
-        [material setValue:[NSNumber numberWithInt:SCNWrapModeRepeat]
+        [material setValue:@(SCNWrapModeRepeat)
                     forKey:wrapT];
-        [material setValue:[NSNumber numberWithInt:1] forKey:intensity];
-        [material setValue:[NSNumber numberWithInt:SCNFilterModeLinear]
+        [material setValue:@1 forKey:intensity];
+        [material setValue:@(SCNFilterModeLinear)
                     forKey:minFilter];
-        [material setValue:[NSNumber numberWithInt:SCNFilterModeLinear]
+        [material setValue:@(SCNFilterModeLinear)
                     forKey:magFilter];
     }
 }

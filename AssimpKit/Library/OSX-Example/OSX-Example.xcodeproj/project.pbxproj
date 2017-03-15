@@ -18,6 +18,8 @@
 		552A6A1D1E79DB1A003D4CB1 /* AssimpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		552A6A201E79DC28003D4CB1 /* SwiftGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A6A1F1E79DC28003D4CB1 /* SwiftGameView.swift */; };
 		552A6A221E79DF85003D4CB1 /* AssimpKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A6A211E79DF85003D4CB1 /* AssimpKitHelpers.swift */; };
+		552A6A231E79E4FD003D4CB1 /* spider.obj in Resources */ = {isa = PBXBuildFile; fileRef = 77CDAA6F1DD715FE00B7E342 /* spider.obj */; };
+		552A6A241E79E501003D4CB1 /* SpiderTex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77CDAA701DD715FE00B7E342 /* SpiderTex.jpg */; };
 		771E8EF61DDF42690081FD6C /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; };
 		771E8EF71DDF42690081FD6C /* AssimpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7726B8681DF001C200856EE7 /* 3dmodel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7726B8661DF001C200856EE7 /* 3dmodel.png */; };
@@ -274,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				552A6A0F1E79DA60003D4CB1 /* Assets.xcassets in Resources */,
+				552A6A241E79E501003D4CB1 /* SpiderTex.jpg in Resources */,
 				552A6A191E79DA8B003D4CB1 /* play.png in Resources */,
+				552A6A231E79E4FD003D4CB1 /* spider.obj in Resources */,
 				552A6A121E79DA60003D4CB1 /* MainMenu.xib in Resources */,
 				552A6A181E79DA88003D4CB1 /* 3dmodel.png in Resources */,
 				552A6A171E79DA86003D4CB1 /* bones.png in Resources */,
