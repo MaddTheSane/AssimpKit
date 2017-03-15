@@ -59,7 +59,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /**
  The array of scenes where each scene is a skeletal animation.
  */
-@property (readonly, nonatomic) NSDictionary *animationScenes;
+@property (readonly, nonatomic) NSDictionary<NSString*,SCNScene*> *animationScenes;
 
 #pragma mark - Animation data
 
@@ -76,7 +76,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /**
  The dictionary of SCNAssimpAnimation objects, for each animation in the scene.
  */
-@property (readonly, nonatomic) NSMutableDictionary *animations;
+@property (readonly, nonatomic) NSMutableDictionary<NSString*,SCNAssimpAnimation*> *animations;
 
 #pragma mark - Creating a new scene animation
 /**
@@ -88,7 +88,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  @return A new scene animation object.
  */
-- (id)init;
+- (instancetype)init;
 
 #pragma mark - Add, fetch SCNAssimpAnimation animations
 
@@ -114,7 +114,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  @return The array of animation keys.
  */
-- (NSArray *)animationKeys;
+- (NSArray<NSString*> *)animationKeys;
 
 /**
  Return the SCNScene object for the specified animation key.

@@ -56,7 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  @return A new importer.
  */
-- (id)init;
+- (instancetype)init;
 
 #pragma mark - Loading a scene
 /**

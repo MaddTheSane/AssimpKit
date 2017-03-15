@@ -33,6 +33,8 @@
  ---------------------------------------------------------------------------
  */
 
+#import <Foundation/Foundation.h>
+
 /**
  Defines the flags for all possible post processing steps.
 
