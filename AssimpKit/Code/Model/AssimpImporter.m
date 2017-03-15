@@ -41,6 +41,25 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "assimp/postprocess.h" // Post processing flags
 #include "assimp/scene.h"       // Output data structure
 
+/**
+ * returns the last path component of a Unix or Windows style path.
+ 
+ * @return the last path component of a string.
+ */
+static NSString *findLastPathComponent(NSString*thePath)
+{
+	NSCharacterSet *winPath = [NSCharacterSet characterSetWithCharactersInString:@"\\"];
+	NSCharacterSet *unixPath = [NSCharacterSet characterSetWithCharactersInString:@"/"];
+	if ([thePath rangeOfCharacterFromSet:winPath].location != NSNotFound
+		&& [thePath rangeOfCharacterFromSet:unixPath].location == NSNotFound) {
+		//We have a Windows-style path!
+		NSURL *newURL = CFBridgingRelease(CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)thePath, kCFURLWindowsPathStyle, false));
+		return newURL.lastPathComponent;
+	} else {
+		return thePath.lastPathComponent;
+	}
+}
+
 @interface AssimpImporter ()
 
 #pragma mark - Bone data
@@ -594,10 +613,9 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
                              NULL, NULL, NULL, NULL);
         NSString *texFilePath = [NSString
             stringWithUTF8String:(const char *_Nonnull) & aiPath.data];
-        NSString *texFileName = [texFilePath lastPathComponent];
-        NSString *sceneDir = [[path stringByDeletingLastPathComponent]
-            stringByAppendingString:@"/"];
-        NSString *texPath = [sceneDir stringByAppendingString:texFileName];
+        NSString *texFileName = findLastPathComponent(texFilePath);
+        NSString *sceneDir = [path stringByDeletingLastPathComponent];
+        NSString *texPath = [sceneDir stringByAppendingPathComponent:texFileName];
         DLog(@"  tex path is %@", texPath);
 
         NSString *channel = @".mappingChannel";
