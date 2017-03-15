@@ -116,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return Retuns the root node of the skeleton in the scene.
  */
-- (SCNNode *)findSkeletonRootNode;
+- (nullable SCNNode *)findSkeletonRootNode;
 
 @end
 

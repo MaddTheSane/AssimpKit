@@ -602,7 +602,7 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
 
         NSString *channel = @".mappingChannel";
         NSString *wrapS = @".wrapS";
-        NSString *wrapT = @".wrapS";
+        NSString *wrapT = @".wrapT";
         NSString *intensity = @".intensity";
         NSString *minFilter = @".minificationFilter";
         NSString *magFilter = @".magnificationFilter";
