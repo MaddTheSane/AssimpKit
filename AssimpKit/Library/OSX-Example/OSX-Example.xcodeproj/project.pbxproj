@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552A6A0D1E79DA60003D4CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A6A0C1E79DA60003D4CB1 /* AppDelegate.swift */; };
+		552A6A0F1E79DA60003D4CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552A6A0E1E79DA60003D4CB1 /* Assets.xcassets */; };
+		552A6A121E79DA60003D4CB1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552A6A101E79DA60003D4CB1 /* MainMenu.xib */; };
+		552A6A171E79DA86003D4CB1 /* bones.png in Resources */ = {isa = PBXBuildFile; fileRef = 7726B8671DF001C200856EE7 /* bones.png */; };
+		552A6A181E79DA88003D4CB1 /* 3dmodel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7726B8661DF001C200856EE7 /* 3dmodel.png */; };
+		552A6A191E79DA8B003D4CB1 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 7726B86A1DF0029300856EE7 /* play.png */; };
+		552A6A1B1E79DAED003D4CB1 /* SwiftGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A6A1A1E79DAED003D4CB1 /* SwiftGameViewController.swift */; };
+		552A6A1C1E79DB1A003D4CB1 /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; };
+		552A6A1D1E79DB1A003D4CB1 /* AssimpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		552A6A201E79DC28003D4CB1 /* SwiftGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A6A1F1E79DC28003D4CB1 /* SwiftGameView.swift */; };
+		552A6A221E79DF85003D4CB1 /* AssimpKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A6A211E79DF85003D4CB1 /* AssimpKitHelpers.swift */; };
 		771E8EF61DDF42690081FD6C /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; };
 		771E8EF71DDF42690081FD6C /* AssimpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 771E8EF51DDF42690081FD6C /* AssimpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7726B8681DF001C200856EE7 /* 3dmodel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7726B8661DF001C200856EE7 /* 3dmodel.png */; };
@@ -23,6 +34,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		552A6A1E1E79DB1A003D4CB1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				552A6A1D1E79DB1A003D4CB1 /* AssimpKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		779DF1AC1DDF27AD00DED366 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +68,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		552A6A0A1E79DA60003D4CB1 /* OSX-SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSX-SwiftExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		552A6A0C1E79DA60003D4CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		552A6A0E1E79DA60003D4CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		552A6A111E79DA60003D4CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		552A6A131E79DA60003D4CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552A6A1A1E79DAED003D4CB1 /* SwiftGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGameViewController.swift; sourceTree = "<group>"; };
+		552A6A1F1E79DC28003D4CB1 /* SwiftGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGameView.swift; sourceTree = "<group>"; };
+		552A6A211E79DF85003D4CB1 /* AssimpKitHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssimpKitHelpers.swift; sourceTree = "<group>"; };
 		771E8EF51DDF42690081FD6C /* AssimpKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AssimpKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7726B8661DF001C200856EE7 /* 3dmodel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dmodel.png; sourceTree = "<group>"; };
 		7726B8671DF001C200856EE7 /* bones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bones.png; sourceTree = "<group>"; };
@@ -67,6 +97,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		552A6A071E79DA60003D4CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552A6A1C1E79DB1A003D4CB1 /* AssimpKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77CDAA4F1DD715C300B7E342 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,11 +116,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552A6A0B1E79DA60003D4CB1 /* OSX-SwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				552A6A0C1E79DA60003D4CB1 /* AppDelegate.swift */,
+				552A6A1A1E79DAED003D4CB1 /* SwiftGameViewController.swift */,
+				552A6A1F1E79DC28003D4CB1 /* SwiftGameView.swift */,
+				552A6A211E79DF85003D4CB1 /* AssimpKitHelpers.swift */,
+				552A6A0E1E79DA60003D4CB1 /* Assets.xcassets */,
+				552A6A101E79DA60003D4CB1 /* MainMenu.xib */,
+				552A6A131E79DA60003D4CB1 /* Info.plist */,
+			);
+			path = "OSX-SwiftExample";
+			sourceTree = "<group>";
+		};
 		77CDAA491DD715C300B7E342 = {
 			isa = PBXGroup;
 			children = (
 				771E8EF51DDF42690081FD6C /* AssimpKit.framework */,
 				77CDAA541DD715C300B7E342 /* OSX-Example */,
+				552A6A0B1E79DA60003D4CB1 /* OSX-SwiftExample */,
 				77CDAA531DD715C300B7E342 /* Products */,
 				77CDAA7F1DD7172F00B7E342 /* Frameworks */,
 			);
@@ -92,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				77CDAA521DD715C300B7E342 /* OSX-Example.app */,
+				552A6A0A1E79DA60003D4CB1 /* OSX-SwiftExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +191,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		552A6A091E79DA60003D4CB1 /* OSX-SwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 552A6A141E79DA60003D4CB1 /* Build configuration list for PBXNativeTarget "OSX-SwiftExample" */;
+			buildPhases = (
+				552A6A061E79DA60003D4CB1 /* Sources */,
+				552A6A071E79DA60003D4CB1 /* Frameworks */,
+				552A6A081E79DA60003D4CB1 /* Resources */,
+				552A6A1E1E79DB1A003D4CB1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OSX-SwiftExample";
+			productName = "OSX-SwiftExample";
+			productReference = 552A6A0A1E79DA60003D4CB1 /* OSX-SwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		77CDAA511DD715C300B7E342 /* OSX-Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77CDAA631DD715C300B7E342 /* Build configuration list for PBXNativeTarget "OSX-Example" */;
@@ -162,9 +234,14 @@
 		77CDAA4A1DD715C300B7E342 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ison Apps";
 				TargetAttributes = {
+					552A6A091E79DA60003D4CB1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					77CDAA511DD715C300B7E342 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = PRJ5CHFB5D;
@@ -186,11 +263,24 @@
 			projectRoot = "";
 			targets = (
 				77CDAA511DD715C300B7E342 /* OSX-Example */,
+				552A6A091E79DA60003D4CB1 /* OSX-SwiftExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		552A6A081E79DA60003D4CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552A6A0F1E79DA60003D4CB1 /* Assets.xcassets in Resources */,
+				552A6A191E79DA8B003D4CB1 /* play.png in Resources */,
+				552A6A121E79DA60003D4CB1 /* MainMenu.xib in Resources */,
+				552A6A181E79DA88003D4CB1 /* 3dmodel.png in Resources */,
+				552A6A171E79DA86003D4CB1 /* bones.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77CDAA501DD715C300B7E342 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +298,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		552A6A061E79DA60003D4CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552A6A1B1E79DAED003D4CB1 /* SwiftGameViewController.swift in Sources */,
+				552A6A221E79DF85003D4CB1 /* AssimpKitHelpers.swift in Sources */,
+				552A6A201E79DC28003D4CB1 /* SwiftGameView.swift in Sources */,
+				552A6A0D1E79DA60003D4CB1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77CDAA4E1DD715C300B7E342 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +323,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		552A6A101E79DA60003D4CB1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				552A6A111E79DA60003D4CB1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		77CDAA781DD716F100B7E342 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -233,6 +342,35 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		552A6A151E79DA60003D4CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "OSX-SwiftExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.maddthesane.OSX-SwiftExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		552A6A161E79DA60003D4CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "OSX-SwiftExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.maddthesane.OSX-SwiftExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		77CDAA611DD715C300B7E342 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,6 +495,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		552A6A141E79DA60003D4CB1 /* Build configuration list for PBXNativeTarget "OSX-SwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552A6A151E79DA60003D4CB1 /* Debug */,
+				552A6A161E79DA60003D4CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		77CDAA4D1DD715C300B7E342 /* Build configuration list for PBXProject "OSX-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
