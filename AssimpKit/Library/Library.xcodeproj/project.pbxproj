@@ -36,7 +36,6 @@
 		779DF1EE1DDF2A5700DED366 /* SCNScene+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */; };
 		779DF20C1DDF2BB000DED366 /* AssimpImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2031DDF2BB000DED366 /* AssimpImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		779DF20D1DDF2BB000DED366 /* AssimpImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF2041DDF2BB000DED366 /* AssimpImporter.m */; };
-		779DF20E1DDF2BB000DED366 /* AssimpSceneKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2051DDF2BB000DED366 /* AssimpSceneKit-Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
 		779DF20F1DDF2BB000DED366 /* SCNAssimpAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2061DDF2BB000DED366 /* SCNAssimpAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		779DF2101DDF2BB000DED366 /* SCNAssimpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF2071DDF2BB000DED366 /* SCNAssimpAnimation.m */; };
 		779DF2111DDF2BB000DED366 /* SCNAssimpScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2081DDF2BB000DED366 /* SCNAssimpScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -330,7 +329,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				779DF20E1DDF2BB000DED366 /* AssimpSceneKit-Prefix.pch in Headers */,
 				779DF2111DDF2BB000DED366 /* SCNAssimpScene.h in Headers */,
 				779DF20F1DDF2BB000DED366 /* SCNAssimpAnimation.h in Headers */,
 				779DF20C1DDF2BB000DED366 /* AssimpImporter.h in Headers */,

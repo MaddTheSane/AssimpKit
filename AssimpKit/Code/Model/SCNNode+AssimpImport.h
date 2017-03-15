@@ -37,6 +37,8 @@
 #import <SceneKit/SceneKit.h>
 #import "SCNAssimpAnimSettings.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  A scenekit SCNNode category which imitates the SCNAnimatable protocol.
  */
@@ -117,3 +119,5 @@
 - (SCNNode *)findSkeletonRootNode;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -39,6 +39,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import "SCNAssimpScene.h"
 #import "PostProcessingFlags.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  An importer that imports the files with formats supported by Assimp and
  converts the assimp scene graph into a scenekit scene graph.
@@ -66,7 +68,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param postProcessFlags The flags for all possible post processing steps.
  @return A new scene object, or nil if no scene could be loaded.
  */
-- (SCNAssimpScene *)importScene:(NSString *)filePath
+- (nullable SCNAssimpScene *)importScene:(NSString *)filePath
                postProcessFlags:(AssimpKitPostProcessSteps)postProcessFlags;
 
 @end
+
+NS_ASSUME_NONNULL_END

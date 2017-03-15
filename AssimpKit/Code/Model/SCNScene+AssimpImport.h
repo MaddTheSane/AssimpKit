@@ -38,6 +38,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import "SCNAssimpScene.h"
 #import "PostProcessingFlags.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  A scenekit SCNScene category to import scenes using the assimp library.
  */
@@ -54,7 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   @return The array of supported file extensions
 */
-+ (NSArray<NSString *> *)allowedFileExtensions;
+@property (class, readonly, copy) NSArray<NSString *> *allowedFileExtensions;
 /**
  Returns a Boolean value that indicates whether the SCNAssimpScene class can
  read asset data from files with the specified extension.
@@ -72,9 +74,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param postProcessFlags The flags for all possible post processing steps.
  @return A new scene object, or nil if no scene could be loaded.
  */
-+ (SCNAssimpScene *)assimpSceneNamed:(NSString *)name
++ (nullable SCNAssimpScene *)assimpSceneNamed:(NSString *)name
                     postProcessFlags:
-                        (AssimpKitPostProcessSteps)postProcessFlags;
+                        (AssimpKitPostProcessSteps)postProcessFlags NS_SWIFT_NAME(assimpScene(named:postProcessFlags:));
 
 /**
  Loads a scene from the specified NSString URL.
@@ -83,8 +85,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param postProcessFlags The flags for all possible post processing steps.
  @return A new scene object, or nil if no scene could be loaded.
  */
-+ (SCNAssimpScene *)assimpSceneWithURL:(NSURL *)url
++ (nullable SCNAssimpScene *)assimpSceneWithURL:(NSURL *)url
                       postProcessFlags:
                           (AssimpKitPostProcessSteps)postProcessFlags;
 
 @end
+
+NS_ASSUME_NONNULL_END

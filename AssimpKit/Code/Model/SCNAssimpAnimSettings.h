@@ -36,6 +36,8 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  SCNAssimpAnimSettings provides support for CAMediaTiming protocol, animation
  attributes and animating scenekit content.
@@ -105,7 +107,7 @@
 /**
  An optional timing function defining the pacing of the animation.
  */
-@property (strong) CAMediaTimingFunction *timingFunction;
+@property (strong, nullable) CAMediaTimingFunction *timingFunction;
 
 #pragma mark - Getting and setting the delegate
 
@@ -116,7 +118,7 @@
 /**
  Specifies the receiver’s delegate object.
  */
-@property (strong) id<CAAnimationDelegate> delegate;
+@property (strong, nullable) id<CAAnimationDelegate> delegate;
 
 #pragma mark - Controlling SceneKit Animation Timing
 
@@ -158,6 +160,8 @@
  For animations attached to SceneKit objects, a list of events attached to an
  animation.
  */
-@property (nonatomic, copy) NSArray<SCNAnimationEvent *> *animationEvents;
+@property (nonatomic, copy, nullable) NSArray<SCNAnimationEvent *> *animationEvents;
 
 @end
+
+NS_ASSUME_NONNULL_END

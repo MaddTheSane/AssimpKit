@@ -35,6 +35,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import <SceneKit/SceneKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  An object that contains the skeletal key frame animations for the bones which
@@ -53,7 +54,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /**
  The dictionary of CAKeyframeAnimation objects, where each key is a bone name.
  */
-@property (readonly, nonatomic) NSDictionary *frameAnims;
+@property (readonly, nonatomic) NSDictionary<NSString*,CAKeyframeAnimation*> *frameAnims;
 
 #pragma mark - Creating a scene animation
 
@@ -69,6 +70,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param anims The dictionary of key frame animations.
  @return A new scene animation object.
  */
-- (id)initWithKey:(NSString *)key frameAnims:(NSDictionary *)anims;
+- (instancetype)initWithKey:(NSString *)key frameAnims:(NSDictionary<NSString*,CAKeyframeAnimation*> *)anims;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -36,6 +36,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import <SceneKit/SceneKit.h>
 #import "SCNAssimpAnimation.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  A scene graph—a hierarchy of nodes with attached geometries, lights, cameras
  and other attributes that together form a displayable 3D scene.
@@ -101,7 +103,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param key The unique scene animation key.
  @return The scene animation object.
  */
-- (SCNAssimpAnimation *)animationForKey:(NSString *)key;
+- (nullable SCNAssimpAnimation *)animationForKey:(NSString *)key;
 
 #pragma mark - Add, fetch scene animations
 
@@ -114,7 +116,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  @return The array of animation keys.
  */
-- (NSArray<NSString*> *)animationKeys;
+@property (readonly, copy) NSArray<NSString*> *animationKeys;
 
 /**
  Return the SCNScene object for the specified animation key.
@@ -122,7 +124,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param key The unique scene animation key.
  @return The scene animation object.
  */
-- (SCNScene *)animationSceneForKey:(NSString *)key;
+- (nullable SCNScene *)animationSceneForKey:(NSString *)key;
 
 #pragma mark - Make SCNScene objects
 /**
@@ -147,3 +149,5 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 - (void)makeAnimationScenes;
 
 @end
+
+NS_ASSUME_NONNULL_END
