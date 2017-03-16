@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		552A6A011E79CCD7003D4CB1 /* AssimpKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 552A69FF1E79CCD7003D4CB1 /* AssimpKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		552A6A051E79CCF0003D4CB1 /* AssimpKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 552A6A041E79CCF0003D4CB1 /* AssimpKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		552A6A291E7A8AC0003D4CB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A6A281E7A8AC0003D4CB1 /* libz.tbd */; };
+		552A6A2B1E7A8AC8003D4CB1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A6A2A1E7A8AC8003D4CB1 /* libc++.tbd */; };
+		552A6A2D1E7A8B4D003D4CB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A6A2C1E7A8B4D003D4CB1 /* libz.tbd */; };
+		552A6A2F1E7A8B6B003D4CB1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A6A2E1E7A8B6B003D4CB1 /* libc++.tbd */; };
 		7728FCEE1E16518C00B99F2B /* ModelFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7728FCEC1E16518C00B99F2B /* ModelFile.m */; };
 		7728FCF31E16539700B99F2B /* ModelFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7728FCF21E16539700B99F2B /* ModelFile.m */; };
 		7746DB5D1DEEBFE600C651DC /* PostProcessingFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		552A6A261E7A8A81003D4CB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 779DF2301DDF2D7B00DED366 /* OSX-Example.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 552A6A0A1E79DA60003D4CB1;
+			remoteInfo = "OSX-SwiftExample";
+		};
 		779DF2361DDF2D7B00DED366 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 779DF2301DDF2D7B00DED366 /* OSX-Example.xcodeproj */;
@@ -88,6 +99,11 @@
 /* Begin PBXFileReference section */
 		552A69FF1E79CCD7003D4CB1 /* AssimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssimpKit.h; path = ../../Code/Model/AssimpKit.h; sourceTree = "<group>"; };
 		552A6A041E79CCF0003D4CB1 /* AssimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssimpKit.h; path = ../../Code/Model/AssimpKit.h; sourceTree = "<group>"; };
+		552A6A281E7A8AC0003D4CB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		552A6A2A1E7A8AC8003D4CB1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		552A6A2C1E7A8B4D003D4CB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		552A6A2E1E7A8B6B003D4CB1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		552A6A301E7A8BD7003D4CB1 /* assimpkit-mac.exp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.exports; path = "assimpkit-mac.exp"; sourceTree = "<group>"; };
 		7728FCEB1E16518C00B99F2B /* ModelFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelFile.h; path = ../../Code/Model/Tests/ModelFile.h; sourceTree = "<group>"; };
 		7728FCEC1E16518C00B99F2B /* ModelFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelFile.m; path = ../../Code/Model/Tests/ModelFile.m; sourceTree = "<group>"; };
 		7728FCF11E16539700B99F2B /* ModelFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelFile.h; path = ../../Code/Model/Tests/ModelFile.h; sourceTree = "<group>"; };
@@ -149,6 +165,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552A6A2F1E7A8B6B003D4CB1 /* libc++.tbd in Frameworks */,
+				552A6A2D1E7A8B4D003D4CB1 /* libz.tbd in Frameworks */,
 				779DF1DC1DDF29FF00DED366 /* libassimp-fat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +175,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552A6A2B1E7A8AC8003D4CB1 /* libc++.tbd in Frameworks */,
+				552A6A291E7A8AC0003D4CB1 /* libz.tbd in Frameworks */,
 				779DF2151DDF2BEE00DED366 /* libassimp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,8 +211,8 @@
 				779DF1FC1DDF2B8700DED366 /* AssimpKit-macOS */,
 				779DF2611DDF2F9800DED366 /* AssimpKitTests_iOS */,
 				779DF2751DDF30B200DED366 /* AssimpKitTests_macOS */,
-				779DF18C1DDF25C500DED366 /* Products */,
 				779DF1A61DDF262400DED366 /* Frameworks */,
+				779DF18C1DDF25C500DED366 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +230,10 @@
 		779DF1A61DDF262400DED366 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				552A6A2E1E7A8B6B003D4CB1 /* libc++.tbd */,
+				552A6A2C1E7A8B4D003D4CB1 /* libz.tbd */,
+				552A6A2A1E7A8AC8003D4CB1 /* libc++.tbd */,
+				552A6A281E7A8AC0003D4CB1 /* libz.tbd */,
 				779DF1DB1DDF29FF00DED366 /* libassimp-fat.a */,
 				779DF1A71DDF262500DED366 /* libassimp.a */,
 			);
@@ -258,6 +282,7 @@
 				77EB2B891E1776EB004FA171 /* SCNNode+AssimpImport.m */,
 				77824E3A1E1A5B21000B24A3 /* SCNAssimpAnimSettings.h */,
 				77824E3B1E1A5B21000B24A3 /* SCNAssimpAnimSettings.m */,
+				552A6A301E7A8BD7003D4CB1 /* assimpkit-mac.exp */,
 			);
 			path = "AssimpKit-macOS";
 			sourceTree = "<group>";
@@ -266,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				779DF2371DDF2D7B00DED366 /* OSX-Example.app */,
+				552A6A271E7A8A81003D4CB1 /* OSX-SwiftExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -476,6 +502,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		552A6A271E7A8A81003D4CB1 /* OSX-SwiftExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "OSX-SwiftExample.app";
+			remoteRef = 552A6A261E7A8A81003D4CB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		779DF2371DDF2D7B00DED366 /* OSX-Example.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -685,7 +718,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
@@ -707,8 +739,6 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Assimp/lib/ios";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
-					"-lz",
-					"-lstdc++",
 					"-ObjC",
 					"-all_load",
 				);
@@ -728,7 +758,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
@@ -748,8 +777,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Assimp/lib/ios";
 				OTHER_LDFLAGS = (
-					"-lz",
-					"-lstdc++",
 					"-ObjC",
 					"-all_load",
 				);
@@ -777,6 +804,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXPORTED_SYMBOLS_FILE = "AssimpKit-macOS/assimpkit-mac.exp";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/../Code/Model/AssimpSceneKit-Prefix.pch";
@@ -784,11 +812,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Assimp/lib/osx";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
-					"-lz",
-					"-lstdc++",
 					"-ObjC",
 					"-all_load",
 				);
@@ -813,6 +838,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXPORTED_SYMBOLS_FILE = "AssimpKit-macOS/assimpkit-mac.exp";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/../Code/Model/AssimpSceneKit-Prefix.pch";
@@ -820,10 +846,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Assimp/lib/osx";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = (
-					"-lz",
-					"-lstdc++",
 					"-ObjC",
 					"-all_load",
 				);

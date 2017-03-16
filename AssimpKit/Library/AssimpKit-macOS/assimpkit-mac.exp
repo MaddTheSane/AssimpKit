@@ -1,0 +1,17 @@
+#  assimpkit-mac.exp
+#  Library
+#
+#  Created by C.W. Betts on 3/16/17.
+#
+
+_AssimpKitVersionNumber
+_AssimpKitVersionString
+.objc_class_name_AssimpImporter
+.objc_class_name_SCNAssimpAnimSettings
+.objc_class_name_SCNAssimpAnimation
+.objc_class_name_SCNAssimpScene
+
+#used for debugging
+_aiGetErrorString
+_aiGetMaterialTextureCount
+_aiImportFile

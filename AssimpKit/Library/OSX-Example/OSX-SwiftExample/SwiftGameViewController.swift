@@ -36,8 +36,11 @@ class SwiftGameViewController: NSViewController, CAAnimationDelegate {
 		let clicked = panel.runModal()
 		
 		if clicked == NSFileHandlingPanelOKButton {
-			let scene = SCNScene.assimpScene(with: panel.url!, postProcessFlags: [.process_FlipUVs, .process_Triangulate])
-			gameView.scene = scene?.modelScene
+			let processFlags: AssimpKitPostProcessSteps = [.process_FlipUVs, .process_Triangulate]
+			let scene = SCNScene.assimpScene(with: panel.url!, postProcessFlags: processFlags)
+			if let newSceme = scene?.modelScene {
+				gameView.scene = newSceme
+			}
 		}
 	}
 	
@@ -56,13 +59,12 @@ class SwiftGameViewController: NSViewController, CAAnimationDelegate {
 				scene = animScene?.modelScene
 				gameView.scene = scene
 			}
-			let animationKeys = animScene!.animationKeys
+			let animationKeys = animScene?.animationKeys
 			// If multiple animations exist, load the first animation
-			if animationKeys.count > 0 {
+			if let key = animationKeys?.first {
 				let settings = SCNAssimpAnimSettings()
 				settings.repeatCount = 3
 				
-				let key = animationKeys[0]
 				let eventBlock: SCNAnimationEventBlock = {animation, animatedObject, playingBackward in
 					NSLog(" Animation Event triggered ");
 					
@@ -77,13 +79,12 @@ class SwiftGameViewController: NSViewController, CAAnimationDelegate {
 					// [scene.rootNode resumeAnimationSceneForKey:key];
 				}
 				let animEvent = SCNAnimationEvent(keyTime: 0.9, block: eventBlock)
-				let animEvents = [animEvent]
-				settings.animationEvents = animEvents
+				settings.animationEvents = [animEvent]
 				
 				settings.delegate = self
 				
-				let animation = animScene?.animationScene(forKey: key)
-				scene?.rootNode.addAnimationScene(animation!, forKey: key, with: settings)
+				let animation = animScene!.animationScene(forKey: key)!
+				scene!.rootNode.addAnimationScene(animation, forKey: key, with: settings)
 			}
 		}
 	}
