@@ -590,6 +590,36 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
  @name Make scenekit materials
  */
 
+static inline const char *stripUnusedNumbers(const char* __x, int __y, int __z)
+{
+	return __x;
+};
+
+static inline SCNWrapMode aiMapModeToSceneKit(enum aiTextureMapMode mapMode)
+{
+	switch (mapMode) {
+		case aiTextureMapMode_Wrap:
+			return SCNWrapModeRepeat;
+			break;
+			
+		case aiTextureMapMode_Clamp:
+			return SCNWrapModeClamp;
+			break;
+
+		case aiTextureMapMode_Decal:
+			return SCNWrapModeClampToBorder;
+			break;
+
+		case aiTextureMapMode_Mirror:
+			return SCNWrapModeMirror;
+			break;
+
+		default:
+			return 0;
+			break;
+	}
+}
+
 /**
  Updates a scenekit material property with the texture file path or the color
  if no texture is specifed.
@@ -609,8 +639,9 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
     {
         DLog(@" has %d textures", nTextures);
         struct aiString aiPath;
+		enum aiTextureMapMode mapmodes[2];
         aiGetMaterialTexture(aiMaterial, aiTextureType, 0, &aiPath, NULL, NULL,
-                             NULL, NULL, NULL, NULL);
+                             NULL, NULL, &mapmodes, NULL);
         NSString *texFilePath = [NSString
             stringWithUTF8String:(const char *_Nonnull) & aiPath.data];
         NSString *texFileName = findLastPathComponent(texFilePath);
@@ -625,67 +656,120 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
         NSString *minFilter = @".minificationFilter";
         NSString *magFilter = @".magnificationFilter";
 
-        NSString *keyPrefix = @"";
-        if (aiTextureType == aiTextureType_DIFFUSE)
-        {
-            material.diffuse.contents = texPath;
-            keyPrefix = @"diffuse";
-        }
-        else if (aiTextureType == aiTextureType_SPECULAR)
-        {
-            material.specular.contents = texPath;
-            keyPrefix = @"specular";
-        }
-        else if (aiTextureType == aiTextureType_AMBIENT)
-        {
-            material.ambient.contents = texPath;
-            keyPrefix = @"ambient";
-        }
-        else if (aiTextureType == aiTextureType_REFLECTION)
-        {
-            material.reflective.contents = texPath;
-            keyPrefix = @"reflective";
-        }
-        else if (aiTextureType == aiTextureType_EMISSIVE)
-        {
-            material.emission.contents = texPath;
-            keyPrefix = @"emissive";
-        }
-        else if (aiTextureType == aiTextureType_OPACITY)
-        {
-            material.transparent.contents = texPath;
-            keyPrefix = @"transparent";
-        }
-        else if (aiTextureType == aiTextureType_NORMALS)
-        {
-            material.normal.contents = texPath;
-            keyPrefix = @"normal";
-        }
-        else if (aiTextureType == aiTextureType_LIGHTMAP)
-        {
-            material.ambientOcclusion.contents = texPath;
-            keyPrefix = @"ambientOcclusion";
-        }
+		const char *colorKey = NULL;
+		SCNMaterialProperty *matProp = nil;
+		switch (aiTextureType) {
+			case aiTextureType_DIFFUSE:
+				matProp = material.diffuse;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_DIFFUSE);
+				break;
+				
+			case aiTextureType_SPECULAR:
+				matProp = material.specular;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_SPECULAR);
+				break;
+				
+			case aiTextureType_AMBIENT:
+				matProp = material.ambient;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_AMBIENT);
+				break;
+				
+			case aiTextureType_REFLECTION:
+				matProp = material.reflective;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_REFLECTIVE);
+				break;
+				
+			case aiTextureType_EMISSIVE:
+				matProp = material.emission;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_EMISSIVE);
+				break;
+				
+			case aiTextureType_OPACITY:
+				matProp = material.transparent;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_TRANSPARENT);
+				break;
+				
+			case aiTextureType_NORMALS:
+				matProp = material.normal;
+				break;
+				
+			case aiTextureType_LIGHTMAP:
+				matProp = material.ambientOcclusion;
+				break;
+				
+			default:
+				break;
+		}
+		
+		if ([[NSFileManager defaultManager] fileExistsAtPath:texPath]) {
+			matProp.contents = texPath;
+		} else if (colorKey != NULL) {
+			struct aiColor4D theColor;
+			aiGetMaterialColor(aiMaterial, colorKey, 0, 0, &theColor);
+			CGFloat colComps[] = {theColor.r, theColor.g, theColor.b, theColor.a};
+			CGColorSpaceRef colSpace = CGColorSpaceCreateDeviceRGB();
+			matProp.contents = CFBridgingRelease(CGColorCreate(colSpace, colComps));
+			CGColorSpaceRelease(colSpace);
+		} else if (matProp != nil) {
+			// just pass in our bad path, I guess.
+			matProp.contents = texPath;
+		}
 
-        // Update the keys
-        channel = [keyPrefix stringByAppendingString:channel];
-        wrapS = [keyPrefix stringByAppendingString:wrapS];
-        wrapT = [keyPrefix stringByAppendingString:wrapT];
-        intensity = [keyPrefix stringByAppendingString:intensity];
-        minFilter = [keyPrefix stringByAppendingString:minFilter];
-        magFilter = [keyPrefix stringByAppendingString:magFilter];
-
-        [material setValue:0 forKey:channel];
-        [material setValue:@(SCNWrapModeRepeat)
-                    forKey:wrapS];
-        [material setValue:@(SCNWrapModeRepeat)
-                    forKey:wrapT];
-        [material setValue:@1 forKey:intensity];
-        [material setValue:@(SCNFilterModeLinear)
-                    forKey:minFilter];
-        [material setValue:@(SCNFilterModeLinear)
-                    forKey:magFilter];
-    }
+		matProp.mappingChannel = 0;
+		matProp.wrapS = aiMapModeToSceneKit(mapmodes[0]);
+		matProp.wrapT = aiMapModeToSceneKit(mapmodes[1]);
+		matProp.intensity = 1;
+		matProp.minificationFilter = SCNFilterModeLinear;
+		matProp.magnificationFilter = SCNFilterModeLinear;
+	} else {
+		//use color
+		const char* colorKey;
+		SCNMaterialProperty *matProp = nil;
+		switch (aiTextureType) {
+			case aiTextureType_DIFFUSE:
+				matProp = material.diffuse;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_DIFFUSE);
+				break;
+				
+			case aiTextureType_SPECULAR:
+				matProp = material.specular;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_SPECULAR);
+				break;
+				
+			case aiTextureType_AMBIENT:
+				matProp = material.ambient;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_AMBIENT);
+				break;
+				
+			case aiTextureType_REFLECTION:
+				matProp = material.reflective;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_REFLECTIVE);
+				break;
+				
+			case aiTextureType_EMISSIVE:
+				matProp = material.emission;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_EMISSIVE);
+				break;
+				
+			case aiTextureType_OPACITY:
+				matProp = material.transparent;
+				colorKey = stripUnusedNumbers(AI_MATKEY_COLOR_TRANSPARENT);
+				break;
+				
+			default:
+				return;
+				break;
+		}
+		struct aiColor4D theColor;
+		aiReturn retVal = aiGetMaterialColor(aiMaterial, colorKey, 0, 0, &theColor);
+		if (retVal != aiReturn_SUCCESS) {
+			return;
+		}
+		CGFloat colComps[] = {theColor.r, theColor.g, theColor.b, theColor.a};
+		CGColorSpaceRef colSpace = CGColorSpaceCreateDeviceRGB();
+		matProp.contents = CFBridgingRelease(CGColorCreate(colSpace, colComps));
+		CGColorSpaceRelease(colSpace);
+	}
 }
 
 /**
