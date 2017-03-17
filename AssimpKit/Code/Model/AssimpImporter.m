@@ -615,7 +615,7 @@ static inline SCNWrapMode aiMapModeToSceneKit(enum aiTextureMapMode mapMode)
 			break;
 
 		default:
-			return 0;
+			return SCNWrapModeRepeat;
 			break;
 	}
 }
