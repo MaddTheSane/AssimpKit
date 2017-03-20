@@ -66,7 +66,7 @@ class SwiftGameViewController: NSViewController, CAAnimationDelegate {
 				settings.repeatCount = 3
 				
 				let eventBlock: SCNAnimationEventBlock = {animation, animatedObject, playingBackward in
-					NSLog(" Animation Event triggered ");
+					NSLog(" Animation (\(animation)) Event triggered ")
 					
 					// To test removing animation uncomment
 					// Then the animation wont repeat 3 times
@@ -74,8 +74,7 @@ class SwiftGameViewController: NSViewController, CAAnimationDelegate {
 					// is completed, as event key time is 0.9
 					// [scene.rootNode removeAnimationSceneForKey:key];
 					scene!.rootNode.pauseAnimationScene(forKey: key)
-					NSLog(" Animation paused: \(scene!.rootNode.isAnimationScene(forKeyPaused: key))"
-					       );
+					NSLog(" Animation paused: \(scene!.rootNode.isAnimationScenePaused(forKey: key))")
 					// [scene.rootNode resumeAnimationSceneForKey:key];
 				}
 				let animEvent = SCNAnimationEvent(keyTime: 0.9, block: eventBlock)
@@ -90,10 +89,10 @@ class SwiftGameViewController: NSViewController, CAAnimationDelegate {
 	}
 	
 	func animationDidStart(_ anim: CAAnimation) {
-		NSLog(" animation did start...")
+		NSLog(" animation (\(anim)) did start...")
 	}
 	
 	func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-		NSLog(" animation did stop...")
+		NSLog(" animation (\(anim)) did stop...")
 	}
 }

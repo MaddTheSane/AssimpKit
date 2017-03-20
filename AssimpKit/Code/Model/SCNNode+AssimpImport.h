@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
  @return YES if the specified animation is paused. NO if the animation is
  running or no animation is attached to the object with that key.
  */
-- (BOOL)isAnimationSceneForKeyPaused:(NSString *)animKey;
+- (BOOL)isAnimationSceneForKeyPaused:(NSString *)animKey NS_SWIFT_NAME(isAnimationScenePaused(forKey:));
 
 #pragma mark - Skeleton
 
