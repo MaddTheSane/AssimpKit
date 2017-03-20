@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		552A6A011E79CCD7003D4CB1 /* AssimpKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 552A69FF1E79CCD7003D4CB1 /* AssimpKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		552A6A011E79CCD7003D4CB1 /* AssimpKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 552A6A041E79CCF0003D4CB1 /* AssimpKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		552A6A051E79CCF0003D4CB1 /* AssimpKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 552A6A041E79CCF0003D4CB1 /* AssimpKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		552A6A291E7A8AC0003D4CB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A6A281E7A8AC0003D4CB1 /* libz.tbd */; };
 		552A6A2B1E7A8AC8003D4CB1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 552A6A2A1E7A8AC8003D4CB1 /* libc++.tbd */; };
@@ -16,7 +16,7 @@
 		7728FCEE1E16518C00B99F2B /* ModelFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7728FCEC1E16518C00B99F2B /* ModelFile.m */; };
 		7728FCF31E16539700B99F2B /* ModelFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7728FCF21E16539700B99F2B /* ModelFile.m */; };
 		7746DB5D1DEEBFE600C651DC /* PostProcessingFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7746DB5F1DEED16E00C651DC /* PostProcessingFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 7746DB5E1DEED16E00C651DC /* PostProcessingFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7746DB5F1DEED16E00C651DC /* PostProcessingFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7746DB6A1DEEF93F00C651DC /* valid-extensions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7746DB691DEEF93F00C651DC /* valid-extensions.txt */; };
 		7746DB6D1DEEFD8600C651DC /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779DF1D31DDF29F200DED366 /* AssimpKit.framework */; };
 		7746DB711DEEFE4000C651DC /* SCNSceneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746DB701DEEFE4000C651DC /* SCNSceneTests.m */; };
@@ -24,8 +24,8 @@
 		7746DB741DEF08FE00C651DC /* not-supported-formats.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7746DB731DEF08FE00C651DC /* not-supported-formats.txt */; };
 		7746DB751DEF090500C651DC /* not-supported-formats.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7746DB731DEF08FE00C651DC /* not-supported-formats.txt */; };
 		7746DB771DEF0DFA00C651DC /* SCNSceneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746DB761DEF0DFA00C651DC /* SCNSceneTests.m */; };
-		77824E3C1E1A5B21000B24A3 /* SCNAssimpAnimSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 77824E3A1E1A5B21000B24A3 /* SCNAssimpAnimSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77824E3D1E1A5B21000B24A3 /* SCNAssimpAnimSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 77824E3B1E1A5B21000B24A3 /* SCNAssimpAnimSettings.m */; };
+		77824E3C1E1A5B21000B24A3 /* SCNAssimpAnimSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 77824E401E1A5B45000B24A3 /* SCNAssimpAnimSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77824E3D1E1A5B21000B24A3 /* SCNAssimpAnimSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 77824E411E1A5B45000B24A3 /* SCNAssimpAnimSettings.m */; };
 		77824E421E1A5B45000B24A3 /* SCNAssimpAnimSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 77824E401E1A5B45000B24A3 /* SCNAssimpAnimSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77824E431E1A5B45000B24A3 /* SCNAssimpAnimSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 77824E411E1A5B45000B24A3 /* SCNAssimpAnimSettings.m */; };
 		779DF1DC1DDF29FF00DED366 /* libassimp-fat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 779DF1DB1DDF29FF00DED366 /* libassimp-fat.a */; };
@@ -38,22 +38,22 @@
 		779DF1EC1DDF2A5700DED366 /* SCNAssimpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1E31DDF2A5700DED366 /* SCNAssimpScene.m */; };
 		779DF1ED1DDF2A5700DED366 /* SCNScene+AssimpImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF1E41DDF2A5700DED366 /* SCNScene+AssimpImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		779DF1EE1DDF2A5700DED366 /* SCNScene+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */; };
-		779DF20C1DDF2BB000DED366 /* AssimpImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2031DDF2BB000DED366 /* AssimpImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		779DF20D1DDF2BB000DED366 /* AssimpImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF2041DDF2BB000DED366 /* AssimpImporter.m */; };
-		779DF20F1DDF2BB000DED366 /* SCNAssimpAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2061DDF2BB000DED366 /* SCNAssimpAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		779DF2101DDF2BB000DED366 /* SCNAssimpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF2071DDF2BB000DED366 /* SCNAssimpAnimation.m */; };
-		779DF2111DDF2BB000DED366 /* SCNAssimpScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF2081DDF2BB000DED366 /* SCNAssimpScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		779DF2121DDF2BB000DED366 /* SCNAssimpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF2091DDF2BB000DED366 /* SCNAssimpScene.m */; };
-		779DF2131DDF2BB000DED366 /* SCNScene+AssimpImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF20A1DDF2BB000DED366 /* SCNScene+AssimpImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		779DF2141DDF2BB000DED366 /* SCNScene+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF20B1DDF2BB000DED366 /* SCNScene+AssimpImport.m */; };
+		779DF20C1DDF2BB000DED366 /* AssimpImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF1DD1DDF2A5700DED366 /* AssimpImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779DF20D1DDF2BB000DED366 /* AssimpImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1DE1DDF2A5700DED366 /* AssimpImporter.m */; };
+		779DF20F1DDF2BB000DED366 /* SCNAssimpAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF1E01DDF2A5700DED366 /* SCNAssimpAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779DF2101DDF2BB000DED366 /* SCNAssimpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1E11DDF2A5700DED366 /* SCNAssimpAnimation.m */; };
+		779DF2111DDF2BB000DED366 /* SCNAssimpScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF1E21DDF2A5700DED366 /* SCNAssimpScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779DF2121DDF2BB000DED366 /* SCNAssimpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1E31DDF2A5700DED366 /* SCNAssimpScene.m */; };
+		779DF2131DDF2BB000DED366 /* SCNScene+AssimpImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DF1E41DDF2A5700DED366 /* SCNScene+AssimpImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779DF2141DDF2BB000DED366 /* SCNScene+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */; };
 		779DF2151DDF2BEE00DED366 /* libassimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 779DF1A71DDF262500DED366 /* libassimp.a */; };
 		779DF26E1DDF2FD500DED366 /* AssimpImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF26B1DDF2FD500DED366 /* AssimpImporterTests.m */; };
 		779DF26F1DDF2FD500DED366 /* ModelLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF26D1DDF2FD500DED366 /* ModelLog.m */; };
 		779DF2791DDF30B200DED366 /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779DF1FB1DDF2B8700DED366 /* AssimpKit.framework */; };
 		779DF2821DDF30E700DED366 /* AssimpImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF27F1DDF30E700DED366 /* AssimpImporterTests.m */; };
 		779DF2831DDF30E700DED366 /* ModelLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 779DF2811DDF30E700DED366 /* ModelLog.m */; };
-		77EB2B8A1E1776EB004FA171 /* SCNNode+AssimpImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EB2B881E1776EB004FA171 /* SCNNode+AssimpImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77EB2B8B1E1776EB004FA171 /* SCNNode+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EB2B891E1776EB004FA171 /* SCNNode+AssimpImport.m */; };
+		77EB2B8A1E1776EB004FA171 /* SCNNode+AssimpImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EB2B8E1E17773B004FA171 /* SCNNode+AssimpImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77EB2B8B1E1776EB004FA171 /* SCNNode+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EB2B8F1E17773B004FA171 /* SCNNode+AssimpImport.m */; };
 		77EB2B901E17773B004FA171 /* SCNNode+AssimpImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EB2B8E1E17773B004FA171 /* SCNNode+AssimpImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77EB2B911E17773B004FA171 /* SCNNode+AssimpImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EB2B8F1E17773B004FA171 /* SCNNode+AssimpImport.m */; };
 /* End PBXBuildFile section */
@@ -97,8 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		552A69FF1E79CCD7003D4CB1 /* AssimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssimpKit.h; path = ../../Code/Model/AssimpKit.h; sourceTree = "<group>"; };
-		552A6A041E79CCF0003D4CB1 /* AssimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssimpKit.h; path = ../../Code/Model/AssimpKit.h; sourceTree = "<group>"; };
+		552A6A041E79CCF0003D4CB1 /* AssimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssimpKit.h; sourceTree = "<group>"; };
 		552A6A281E7A8AC0003D4CB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		552A6A2A1E7A8AC8003D4CB1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		552A6A2C1E7A8B4D003D4CB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
@@ -108,40 +107,28 @@
 		7728FCEC1E16518C00B99F2B /* ModelFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelFile.m; path = ../../Code/Model/Tests/ModelFile.m; sourceTree = "<group>"; };
 		7728FCF11E16539700B99F2B /* ModelFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelFile.h; path = ../../Code/Model/Tests/ModelFile.h; sourceTree = "<group>"; };
 		7728FCF21E16539700B99F2B /* ModelFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelFile.m; path = ../../Code/Model/Tests/ModelFile.m; sourceTree = "<group>"; };
-		7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostProcessingFlags.h; path = ../../Code/Model/PostProcessingFlags.h; sourceTree = "<group>"; };
-		7746DB5E1DEED16E00C651DC /* PostProcessingFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostProcessingFlags.h; path = ../../Code/Model/PostProcessingFlags.h; sourceTree = "<group>"; };
+		7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostProcessingFlags.h; sourceTree = "<group>"; };
 		7746DB691DEEF93F00C651DC /* valid-extensions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "valid-extensions.txt"; path = "../assets/valid-extensions.txt"; sourceTree = "<group>"; };
 		7746DB701DEEFE4000C651DC /* SCNSceneTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNSceneTests.m; path = ../../Code/Model/Tests/SCNSceneTests.m; sourceTree = "<group>"; };
 		7746DB731DEF08FE00C651DC /* not-supported-formats.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "not-supported-formats.txt"; path = "../assets/not-supported-formats.txt"; sourceTree = "<group>"; };
 		7746DB761DEF0DFA00C651DC /* SCNSceneTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNSceneTests.m; path = ../../Code/Model/Tests/SCNSceneTests.m; sourceTree = "<group>"; };
-		77824E3A1E1A5B21000B24A3 /* SCNAssimpAnimSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNAssimpAnimSettings.h; path = ../../Code/Model/SCNAssimpAnimSettings.h; sourceTree = "<group>"; };
-		77824E3B1E1A5B21000B24A3 /* SCNAssimpAnimSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNAssimpAnimSettings.m; path = ../../Code/Model/SCNAssimpAnimSettings.m; sourceTree = "<group>"; };
-		77824E401E1A5B45000B24A3 /* SCNAssimpAnimSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNAssimpAnimSettings.h; path = ../../Code/Model/SCNAssimpAnimSettings.h; sourceTree = "<group>"; };
-		77824E411E1A5B45000B24A3 /* SCNAssimpAnimSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNAssimpAnimSettings.m; path = ../../Code/Model/SCNAssimpAnimSettings.m; sourceTree = "<group>"; };
+		77824E401E1A5B45000B24A3 /* SCNAssimpAnimSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNAssimpAnimSettings.h; sourceTree = "<group>"; };
+		77824E411E1A5B45000B24A3 /* SCNAssimpAnimSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNAssimpAnimSettings.m; sourceTree = "<group>"; };
 		779DF1A71DDF262500DED366 /* libassimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libassimp.a; path = ../Assimp/lib/osx/libassimp.a; sourceTree = "<group>"; };
 		779DF1D31DDF29F200DED366 /* AssimpKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AssimpKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779DF1D61DDF29F200DED366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		779DF1DB1DDF29FF00DED366 /* libassimp-fat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libassimp-fat.a"; path = "../Assimp/lib/ios/libassimp-fat.a"; sourceTree = "<group>"; };
-		779DF1DD1DDF2A5700DED366 /* AssimpImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssimpImporter.h; path = ../../Code/Model/AssimpImporter.h; sourceTree = "<group>"; };
-		779DF1DE1DDF2A5700DED366 /* AssimpImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssimpImporter.m; path = ../../Code/Model/AssimpImporter.m; sourceTree = "<group>"; };
-		779DF1DF1DDF2A5700DED366 /* AssimpSceneKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AssimpSceneKit-Prefix.pch"; path = "../../Code/Model/AssimpSceneKit-Prefix.pch"; sourceTree = "<group>"; };
-		779DF1E01DDF2A5700DED366 /* SCNAssimpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNAssimpAnimation.h; path = ../../Code/Model/SCNAssimpAnimation.h; sourceTree = "<group>"; };
-		779DF1E11DDF2A5700DED366 /* SCNAssimpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNAssimpAnimation.m; path = ../../Code/Model/SCNAssimpAnimation.m; sourceTree = "<group>"; };
-		779DF1E21DDF2A5700DED366 /* SCNAssimpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNAssimpScene.h; path = ../../Code/Model/SCNAssimpScene.h; sourceTree = "<group>"; };
-		779DF1E31DDF2A5700DED366 /* SCNAssimpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNAssimpScene.m; path = ../../Code/Model/SCNAssimpScene.m; sourceTree = "<group>"; };
-		779DF1E41DDF2A5700DED366 /* SCNScene+AssimpImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCNScene+AssimpImport.h"; path = "../../Code/Model/SCNScene+AssimpImport.h"; sourceTree = "<group>"; };
-		779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCNScene+AssimpImport.m"; path = "../../Code/Model/SCNScene+AssimpImport.m"; sourceTree = "<group>"; };
+		779DF1DD1DDF2A5700DED366 /* AssimpImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssimpImporter.h; sourceTree = "<group>"; };
+		779DF1DE1DDF2A5700DED366 /* AssimpImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssimpImporter.m; sourceTree = "<group>"; };
+		779DF1DF1DDF2A5700DED366 /* AssimpSceneKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AssimpSceneKit-Prefix.pch"; sourceTree = "<group>"; };
+		779DF1E01DDF2A5700DED366 /* SCNAssimpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNAssimpAnimation.h; sourceTree = "<group>"; };
+		779DF1E11DDF2A5700DED366 /* SCNAssimpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNAssimpAnimation.m; sourceTree = "<group>"; };
+		779DF1E21DDF2A5700DED366 /* SCNAssimpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNAssimpScene.h; sourceTree = "<group>"; };
+		779DF1E31DDF2A5700DED366 /* SCNAssimpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNAssimpScene.m; sourceTree = "<group>"; };
+		779DF1E41DDF2A5700DED366 /* SCNScene+AssimpImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNScene+AssimpImport.h"; sourceTree = "<group>"; };
+		779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNScene+AssimpImport.m"; sourceTree = "<group>"; };
 		779DF1FB1DDF2B8700DED366 /* AssimpKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AssimpKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779DF1FE1DDF2B8700DED366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		779DF2031DDF2BB000DED366 /* AssimpImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssimpImporter.h; path = ../../Code/Model/AssimpImporter.h; sourceTree = "<group>"; };
-		779DF2041DDF2BB000DED366 /* AssimpImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssimpImporter.m; path = ../../Code/Model/AssimpImporter.m; sourceTree = "<group>"; };
-		779DF2051DDF2BB000DED366 /* AssimpSceneKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AssimpSceneKit-Prefix.pch"; path = "../../Code/Model/AssimpSceneKit-Prefix.pch"; sourceTree = "<group>"; };
-		779DF2061DDF2BB000DED366 /* SCNAssimpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNAssimpAnimation.h; path = ../../Code/Model/SCNAssimpAnimation.h; sourceTree = "<group>"; };
-		779DF2071DDF2BB000DED366 /* SCNAssimpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNAssimpAnimation.m; path = ../../Code/Model/SCNAssimpAnimation.m; sourceTree = "<group>"; };
-		779DF2081DDF2BB000DED366 /* SCNAssimpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNAssimpScene.h; path = ../../Code/Model/SCNAssimpScene.h; sourceTree = "<group>"; };
-		779DF2091DDF2BB000DED366 /* SCNAssimpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNAssimpScene.m; path = ../../Code/Model/SCNAssimpScene.m; sourceTree = "<group>"; };
-		779DF20A1DDF2BB000DED366 /* SCNScene+AssimpImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCNScene+AssimpImport.h"; path = "../../Code/Model/SCNScene+AssimpImport.h"; sourceTree = "<group>"; };
-		779DF20B1DDF2BB000DED366 /* SCNScene+AssimpImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCNScene+AssimpImport.m"; path = "../../Code/Model/SCNScene+AssimpImport.m"; sourceTree = "<group>"; };
 		779DF2301DDF2D7B00DED366 /* OSX-Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "OSX-Example.xcodeproj"; path = "OSX-Example/OSX-Example.xcodeproj"; sourceTree = "<group>"; };
 		779DF23C1DDF2D8400DED366 /* iOS-Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "iOS-Example.xcodeproj"; path = "iOS-Example/iOS-Example.xcodeproj"; sourceTree = "<group>"; };
 		779DF2601DDF2F9800DED366 /* AssimpKitTests_iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssimpKitTests_iOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,10 +141,8 @@
 		779DF27F1DDF30E700DED366 /* AssimpImporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssimpImporterTests.m; path = ../../Code/Model/Tests/AssimpImporterTests.m; sourceTree = "<group>"; };
 		779DF2801DDF30E700DED366 /* ModelLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelLog.h; path = ../../Code/Model/Tests/ModelLog.h; sourceTree = "<group>"; };
 		779DF2811DDF30E700DED366 /* ModelLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelLog.m; path = ../../Code/Model/Tests/ModelLog.m; sourceTree = "<group>"; };
-		77EB2B881E1776EB004FA171 /* SCNNode+AssimpImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCNNode+AssimpImport.h"; path = "../../Code/Model/SCNNode+AssimpImport.h"; sourceTree = "<group>"; };
-		77EB2B891E1776EB004FA171 /* SCNNode+AssimpImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCNNode+AssimpImport.m"; path = "../../Code/Model/SCNNode+AssimpImport.m"; sourceTree = "<group>"; };
-		77EB2B8E1E17773B004FA171 /* SCNNode+AssimpImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCNNode+AssimpImport.h"; path = "../../Code/Model/SCNNode+AssimpImport.h"; sourceTree = "<group>"; };
-		77EB2B8F1E17773B004FA171 /* SCNNode+AssimpImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCNNode+AssimpImport.m"; path = "../../Code/Model/SCNNode+AssimpImport.m"; sourceTree = "<group>"; };
+		77EB2B8E1E17773B004FA171 /* SCNNode+AssimpImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+AssimpImport.h"; sourceTree = "<group>"; };
+		77EB2B8F1E17773B004FA171 /* SCNNode+AssimpImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+AssimpImport.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +185,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55C77E0D1E803AA000965F09 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				552A6A041E79CCF0003D4CB1 /* AssimpKit.h */,
+				77824E401E1A5B45000B24A3 /* SCNAssimpAnimSettings.h */,
+				77824E411E1A5B45000B24A3 /* SCNAssimpAnimSettings.m */,
+				7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */,
+				779DF1DD1DDF2A5700DED366 /* AssimpImporter.h */,
+				779DF1DE1DDF2A5700DED366 /* AssimpImporter.m */,
+				779DF1DF1DDF2A5700DED366 /* AssimpSceneKit-Prefix.pch */,
+				779DF1E01DDF2A5700DED366 /* SCNAssimpAnimation.h */,
+				779DF1E11DDF2A5700DED366 /* SCNAssimpAnimation.m */,
+				779DF1E21DDF2A5700DED366 /* SCNAssimpScene.h */,
+				779DF1E31DDF2A5700DED366 /* SCNAssimpScene.m */,
+				779DF1E41DDF2A5700DED366 /* SCNScene+AssimpImport.h */,
+				779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */,
+				77EB2B8E1E17773B004FA171 /* SCNNode+AssimpImport.h */,
+				77EB2B8F1E17773B004FA171 /* SCNNode+AssimpImport.m */,
+			);
+			name = Shared;
+			path = ../Code/Model;
+			sourceTree = "<group>";
+		};
 		779DF17F1DDF257A00DED366 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +215,7 @@
 				7746DB691DEEF93F00C651DC /* valid-extensions.txt */,
 				779DF23C1DDF2D8400DED366 /* iOS-Example.xcodeproj */,
 				779DF2301DDF2D7B00DED366 /* OSX-Example.xcodeproj */,
+				55C77E0D1E803AA000965F09 /* Shared */,
 				779DF1D41DDF29F200DED366 /* AssimpKit-iOS */,
 				779DF1FC1DDF2B8700DED366 /* AssimpKit-macOS */,
 				779DF2611DDF2F9800DED366 /* AssimpKitTests_iOS */,
@@ -243,22 +252,7 @@
 		779DF1D41DDF29F200DED366 /* AssimpKit-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				552A6A041E79CCF0003D4CB1 /* AssimpKit.h */,
-				77824E401E1A5B45000B24A3 /* SCNAssimpAnimSettings.h */,
-				77824E411E1A5B45000B24A3 /* SCNAssimpAnimSettings.m */,
-				7746DB5C1DEEBFE600C651DC /* PostProcessingFlags.h */,
-				779DF1DD1DDF2A5700DED366 /* AssimpImporter.h */,
-				779DF1DE1DDF2A5700DED366 /* AssimpImporter.m */,
-				779DF1DF1DDF2A5700DED366 /* AssimpSceneKit-Prefix.pch */,
-				779DF1E01DDF2A5700DED366 /* SCNAssimpAnimation.h */,
-				779DF1E11DDF2A5700DED366 /* SCNAssimpAnimation.m */,
-				779DF1E21DDF2A5700DED366 /* SCNAssimpScene.h */,
-				779DF1E31DDF2A5700DED366 /* SCNAssimpScene.m */,
-				779DF1E41DDF2A5700DED366 /* SCNScene+AssimpImport.h */,
-				779DF1E51DDF2A5700DED366 /* SCNScene+AssimpImport.m */,
 				779DF1D61DDF29F200DED366 /* Info.plist */,
-				77EB2B8E1E17773B004FA171 /* SCNNode+AssimpImport.h */,
-				77EB2B8F1E17773B004FA171 /* SCNNode+AssimpImport.m */,
 			);
 			path = "AssimpKit-iOS";
 			sourceTree = "<group>";
@@ -266,22 +260,7 @@
 		779DF1FC1DDF2B8700DED366 /* AssimpKit-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				552A69FF1E79CCD7003D4CB1 /* AssimpKit.h */,
-				7746DB5E1DEED16E00C651DC /* PostProcessingFlags.h */,
-				779DF2031DDF2BB000DED366 /* AssimpImporter.h */,
-				779DF2041DDF2BB000DED366 /* AssimpImporter.m */,
-				779DF2051DDF2BB000DED366 /* AssimpSceneKit-Prefix.pch */,
-				779DF2061DDF2BB000DED366 /* SCNAssimpAnimation.h */,
-				779DF2071DDF2BB000DED366 /* SCNAssimpAnimation.m */,
-				779DF2081DDF2BB000DED366 /* SCNAssimpScene.h */,
-				779DF2091DDF2BB000DED366 /* SCNAssimpScene.m */,
-				779DF20A1DDF2BB000DED366 /* SCNScene+AssimpImport.h */,
-				779DF20B1DDF2BB000DED366 /* SCNScene+AssimpImport.m */,
 				779DF1FE1DDF2B8700DED366 /* Info.plist */,
-				77EB2B881E1776EB004FA171 /* SCNNode+AssimpImport.h */,
-				77EB2B891E1776EB004FA171 /* SCNNode+AssimpImport.m */,
-				77824E3A1E1A5B21000B24A3 /* SCNAssimpAnimSettings.h */,
-				77824E3B1E1A5B21000B24A3 /* SCNAssimpAnimSettings.m */,
 				552A6A301E7A8BD7003D4CB1 /* assimpkit-mac.exp */,
 			);
 			path = "AssimpKit-macOS";
