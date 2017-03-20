@@ -24,7 +24,12 @@ extension AssimpKitPostProcessSteps {
 	///  Some of them offer further configurable properties, while some of them might
 	///   not be of use for you so it might be better to not specify them.
 	static var targetRealtimeUseFast: AssimpKitPostProcessSteps {
-		return [.process_CalcTangentSpace, .process_GenNormals, .joinIdenticalVertices, .process_Triangulate, .process_GenUVCoords, .process_SortByPType]
+		return [.process_CalcTangentSpace,
+		        .process_GenNormals,
+		        .joinIdenticalVertices,
+		        .process_Triangulate,
+		        .process_GenUVCoords,
+		        .process_SortByPType]
 	}
 	
 	///  Default postprocess configuration optimizing the data for real-time
