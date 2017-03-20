@@ -32,6 +32,13 @@
  ---------------------------------------------------------------------------
  */
 
+#import <Foundation/Foundation.h>
+
+//! Project version string for AssimpKit.
+FOUNDATION_EXPORT const unsigned char AssimpKitVersionString[];
+
+//! Project version number for AssimpKit.
+FOUNDATION_EXPORT const double AssimpKitVersionNumber;
 
 #import <AssimpKit/PostProcessingFlags.h>
 #import <AssimpKit/AssimpImporter.h>

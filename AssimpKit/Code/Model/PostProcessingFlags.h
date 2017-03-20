@@ -33,7 +33,7 @@
  ---------------------------------------------------------------------------
  */
 
-#import <Foundation/Foundation.h>
+#import <Foundation/NSObjCRuntime.h>
 
 /**
  Defines the flags for all possible post processing steps.
