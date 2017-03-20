@@ -66,7 +66,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if (clicked == NSFileHandlingPanelOKButton)
     {
         SCNAssimpScene *scene = [SCNScene
-            assimpSceneWithURL:[NSURL URLWithString:panel.URL.absoluteString]
+            assimpSceneWithURL:panel.URL
               postProcessFlags:AssimpKit_Process_FlipUVs |
                                AssimpKit_Process_Triangulate];
         self.gameView.scene = scene.modelScene;
@@ -84,7 +84,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if (clicked == NSFileHandlingPanelOKButton)
     {
         SCNAssimpScene *animScene = [SCNScene
-            assimpSceneWithURL:[NSURL URLWithString:panel.URL.absoluteString]
+            assimpSceneWithURL:panel.URL
               postProcessFlags:AssimpKit_Process_FlipUVs |
                                AssimpKit_Process_Triangulate];
         SCNScene *scene = self.gameView.scene;
