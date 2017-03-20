@@ -533,7 +533,7 @@ makeIndicesGeometryElementForMeshIndex:(int)aiMeshIndex
 {
     int indicesCounter = 0;
     int nIndices = [self findNumIndicesInMesh:aiMeshIndex inScene:aiScene];
-    short scnIndices[nIndices];
+    short scnIndices[nIndices ?: 1];
     const struct aiMesh *aiMesh = aiScene->mMeshes[aiMeshIndex];
     for (int i = 0; i < aiMesh->mNumFaces; i++)
     {
@@ -641,20 +641,13 @@ static inline SCNWrapMode aiMapModeToSceneKit(enum aiTextureMapMode mapMode)
         struct aiString aiPath;
 		enum aiTextureMapMode mapmodes[2];
         aiGetMaterialTexture(aiMaterial, aiTextureType, 0, &aiPath, NULL, NULL,
-                             NULL, NULL, &mapmodes, NULL);
+                             NULL, NULL, mapmodes, NULL);
         NSString *texFilePath = [NSString
             stringWithUTF8String:(const char *_Nonnull) & aiPath.data];
         NSString *texFileName = findLastPathComponent(texFilePath);
         NSString *sceneDir = [path stringByDeletingLastPathComponent];
         NSString *texPath = [sceneDir stringByAppendingPathComponent:texFileName];
         DLog(@"  tex path is %@", texPath);
-
-        NSString *channel = @".mappingChannel";
-        NSString *wrapS = @".wrapS";
-        NSString *wrapT = @".wrapT";
-        NSString *intensity = @".intensity";
-        NSString *minFilter = @".minificationFilter";
-        NSString *magFilter = @".magnificationFilter";
 
 		const char *colorKey = NULL;
 		SCNMaterialProperty *matProp = nil;

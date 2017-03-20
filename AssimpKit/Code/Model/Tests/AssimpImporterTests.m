@@ -236,7 +236,7 @@
         {
             texFileName = scnMaterial.ambientOcclusion.contents;
         }
-        if (![[texFileName stringByDeletingLastPathComponent]
+        if ([texFileName isKindOfClass:[NSString class]] && ![[texFileName stringByDeletingLastPathComponent]
                 isEqualToString:[modelPath stringByDeletingLastPathComponent]])
         {
             NSString *errorLog = [NSString
